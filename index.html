@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css"   href = "css/index.css" />
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<script src='js/index.js'></script>
+    <title>Event Form</title>
+</head>
+<body>
+    <div id = "landing-container">
+		<div id = "landing-elements">
+			<img src="images/calendar.png" class = "twicelogo">
+			<h1 class ="twice-landing">Event Title</h1>
+			<div class="button">
+                    <!-- Trigger/Open The Modal -->
+                    <button id="myBtn" class="button-landing button">Book Event</button>
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <p class="create-event">Create a New Event</p>
+                                <span class="close">&times;</span>
+                            </div>
+                            <div class="modal-body" style="text-align: left;">
+                                    <p id="last-content">
+                                        <form action='confirm-page.html'>
+                                            <table id='table-contents' align='center'>
+                                                <tr>
+                                                    <td>
+                                                        <label>Event Type:</label>
+                                                    </td>
+                                                    <td  colspan='3'>
+                                                        <select id='event-type'>
+                                                            <option>Choose one</option>
+                                                            <option value='Anniversary'>Anniversary</option>
+                                                            <option value='Birthday'>Birthday</option>
+                                                            <option value='Conference'>Conference</option>
+                                                            <option value='Debut'>Debut</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                        <p id='warning-event-type'></p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label>Event Title:</label> 
+                                                    </td>
+                                                    <td  colspan='3'>
+                                                        <input type='text' size='30' id='event-title' maxlength='70' placeholder='Your event title here'>
+                                                    </td>
+                                                    <td>
+                                                        <p id='warning-event-title'></p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label>Event Dates:</label>
+                                                        
+                                                    </td>
+                                                    <td>
+                                                        <input type='date' size='30' id='date-from'>
+                                                    </td>
+                                                    <td>
+                                                        to
+                                                    </td>
+                                                    <td>
+                                                        <input type='date' id='date-to'>
+                                                    </td>
+                                                    <td>
+                                                        <p id='warning-event-date'></p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <label>Posting Date:</label>
+                                                    </td>
+                                                    <td>
+                                                        <input type='date' size='30' id='post-date'>
+                                                    </td>
+                                                    <td>
+                                                        <p id='warning-event-postdate'></p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td  colspan='5'>
+                                                        <br><br>
+                                                        <input type='checkbox' id='reg-required'> Is registration required?
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td  colspan='5'>
+                                                        <input type='checkbox' id='fam-prog'> Is this event associated with any family programs?
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td  colspan='5'>
+                                                        <input type='checkbox' id='auto-email'> Upon registration completion, are users to receive an auto-generated email?
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td  colspan='5'>
+                                                        <input type='checkbox' id='point-of-contact'> Is there a point of contact?
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td  colspan='5'>
+                                                        <input type='checkbox' id='hosting-command-point'> Is there a hosting command point of contact?
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <br>
+                                            <br>
+                                            <table class='table-buttons' align='center' width='30%'>
+                                                <tr>
+                                                    <td>
+                                                        <input type='button' size='30' value='Save' onclick="validate()">
+                                                    </td>
+                                                    <td>
+                                                        <input type='button' size='30' value='Cancel' id='cancel'>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </form>
+                                    </p>
+                                 <br>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <script>
+                        var modal = document.getElementById('myModal');
+                        var span = document.getElementsByClassName('close')[0];
+                        var btn = document.getElementById('myBtn');
+
+                        btn.onclick = function()
+                        {
+                            modal.style.display = 'block';
+                        }
+                        span.onclick = function()
+                        {
+                            modal.style.display = "none";
+                        }
+                        
+                        window.onclick = function(event)
+                        {
+                            if (event.target == modal)
+                            {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+                </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
