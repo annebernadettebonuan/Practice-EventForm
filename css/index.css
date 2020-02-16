@@ -28,7 +28,25 @@ img.calendar
   right: 5px;
   top: 120px;
 }
+
+img.calendar-confirm
+{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  right: 5px;
+  top: 150px;
+}
   
+h3.title-confirm
+{
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  text-align: center;
+  top:140px;  
+  color: rgb(221, 93, 54);
+}
+
 h1.title-landing
 {
   font-family: 'Ubuntu', sans-serif;
@@ -37,23 +55,13 @@ h1.title-landing
   top:120px;  
   color: rgb(221, 93, 54);
 }
-  
-h2.oneinamillion-landing{
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: lighter;
-  position: relative;
-  text-align: center;
-  top: 105px;
-  color: rgb(221, 93, 54);
-}
 
-h2.successful{
+h1.successful{
   font-family: 'Ubuntu', sans-serif;
-  font-weight: lighter;
   position: relative;
   text-align: center;
-  top: 130px;
-  color: rgb(221, 93, 54);
+  top: 160px;
+  color: rgb(255, 255, 255);
 }
 
 h4.confirm-page
@@ -74,16 +82,19 @@ h4.confirm-page
   position: relative;
   top: 130px;
 }
-  
-  
-.apply-button
+
+.button-success
 {
   font-family: 'Ubuntu', sans-serif;
-  width: 15%;
-  color: rgb(221, 93, 54);
-  color:  rgb(65, 62, 60);
-  padding: 10px 0px;
-  margin: 8px 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  top: 200px;
+  width: 10%;
+  background-color: rgb(221, 93, 54);
+  color: white;
+  padding: 14px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -91,44 +102,12 @@ h4.confirm-page
   display: block;
   margin-right: auto;
   margin-left: auto;
-  transition: all 0.5s;
+  font-size: 15px;
 }
-  
-.apply-button:hover
-{
-  background-color: rgb(221, 93, 54);
-}
-  
-.apply-button:hover span:after
-{
-  opacity: 1;
-  right: 0;
-}
-  
-.apply-button span
-{
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-  
-.apply-button span:after
-{
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-  
-  .button:hover span {
-    padding-right: 25px;
-  }
 
 #myBtn
 {
+  font-family: 'Ubuntu', sans-serif;
   width: 15%;
   background-color: rgb(221, 93, 54);
   color: white;
@@ -144,7 +123,7 @@ h4.confirm-page
   font-size: 15px;
 }
   
-#myBtn:hover
+#myBtn:hover, #submit-button:hover, #cancel:hover, .button-success:hover
 {
   background-color: rgb(189, 81, 48);
 }
@@ -216,7 +195,7 @@ h4.confirm-page
 /* The Close Button */
 .close
 {
-  color: #aaaaaa;
+  color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -283,7 +262,6 @@ input[type=submit], input[type=button]
   cursor: pointer;
 }
 
-  
 input[type=submit]:hover
 {
   background-color: rgb(189, 81, 48);

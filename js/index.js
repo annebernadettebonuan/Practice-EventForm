@@ -78,7 +78,7 @@ function getEventInfo()
     {
         document.getElementById('submit-button').type = 'submit';
         document.getElementById('submit-button').value = 'Submit';
-        reset();
+        reset(); //reverts form to blank state after submission
     }
 }
 
@@ -154,12 +154,6 @@ function getCheckList()
     var c = autoEmail();
     var d = pointOfContact();
     var e = hostCommandPoint();
-
-    console.log(a);
-    console.log(b);
-    console.log(c);
-    console.log(d);
-    console.log(e);
 }
 
 function validate()
@@ -185,4 +179,53 @@ function reset()
     document.getElementById('warning-event-type').innerHTML = "";
     document.getElementById('warning-event-title').innerHTML = "";
     document.getElementById('warning-event-date').innerHTML = "";
+}
+
+function getEventType()
+{
+    return document.getElementById('event-type').value;
+}
+
+function getEventTitle()
+{
+    return document.getElementById('event-title').value;
+}
+
+function getDateFrom()
+{
+    return document.getElementById('date-from').value;
+}
+
+function getDateTo()
+{
+    return document.getElementById('date-to').value;
+}
+
+function getPostDate()
+{
+    return document.getElementById('post-date').value;
+}
+
+function submit()
+{
+    var event_type = "Event type: " + getEventType();
+    var event_title = "Event title: " + getEventTitle();
+    var date_from = "From: " + getDateFrom();
+    var date_to = "To: " + getDateTo();
+    var post_date = "Posting date: " + getPostDate();
+    var a = regRequired();
+    var b = famProg();
+    var c = autoEmail();
+    var d = pointOfContact();
+    var e = hostCommandPoint();
+    console.log(event_title);
+    console.log(event_type);
+    console.log(date_from);
+    console.log(date_to);
+    console.log(post_date);
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    console.log(e);
 }

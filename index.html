@@ -122,10 +122,10 @@
                                             <table class='table-buttons' align='center' width='30%'>
                                                 <tr>
                                                     <td>
-                                                        <input type='button' size='30' value='Save' id='submit-button' onclick="validate()">
+                                                        <input type='button' size='30' value='Save' id='submit-button' onclick='validate()'>
                                                     </td>
                                                     <td>
-                                                        <input type='button' size='30' value='Cancel' id='cancel' onclick="reset()">
+                                                        <input type='button' size='30' value='Cancel' id='cancel'>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -140,7 +140,13 @@
                         var modal = document.getElementById('myModal');
                         var span = document.getElementsByClassName('close')[0];
                         var btn = document.getElementById('myBtn');
+                        var cancel = document.getElementById('cancel');
 
+                        cancel.onclick = function()
+                        {
+                            reset();
+                        }
+                        
                         btn.onclick = function()
                         {
                             modal.style.display = 'block';
@@ -149,7 +155,7 @@
                         //change this! better if yes or no button instead of typing
                         span.onclick = function()
                         {
-                            var ans = window.confirm('Are you sure? Leaving will lose all changes.');
+                            var ans = confirm('Are you sure? Leaving will lose all changes.');
                                 
                                 if(ans)
                                 {
