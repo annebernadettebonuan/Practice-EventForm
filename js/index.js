@@ -74,11 +74,10 @@ function getEventInfo()
         }
     }
 
-    if(postdatecheck == true && datecheck == true && eventcheck == true && eventtype == true)
+    if(postdatecheck == true && datecheck == true && eventtype == true)
     {
         document.getElementById('submit-button').type = 'submit';
         document.getElementById('submit-button').value = 'Submit';
-        reset(); //reverts form to blank state after submission
     }
 }
 
@@ -218,6 +217,7 @@ function submit()
     var c = autoEmail();
     var d = pointOfContact();
     var e = hostCommandPoint();
+
     console.log(event_title);
     console.log(event_type);
     console.log(date_from);

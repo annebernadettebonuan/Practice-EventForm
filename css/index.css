@@ -273,3 +273,8 @@ input[type=submit]:hover
     color: red;
     vertical-align: bottom;
 }
+
+input:required:invalid, input:focus:invalid
+{
+  font-size: 10px;
+}
