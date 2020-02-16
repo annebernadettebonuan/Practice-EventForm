@@ -144,7 +144,13 @@
 
                         cancel.onclick = function()
                         {
-                            reset();
+                            var ans = confirm('Are you sure? Leaving will lose all changes.');
+                                
+                                if(ans)
+                                {
+                                    reset();
+                                    modal.style.display = "none";
+                                }
                         }
                         
                         btn.onclick = function()
