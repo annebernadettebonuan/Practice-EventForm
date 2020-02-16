@@ -235,19 +235,15 @@ h4.confirm-page
   text-align: center;
 }
 
-
-p.create-event
+span.create-event
 {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 14px;
-    text-align: left;
+  padding-top: 10px;
+  float: left;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
 }
 
 /*FORMS*/
-optgroup
-{
-    font-size: 14px;
-}
 
 input[type=text], select
 {
