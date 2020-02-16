@@ -20,7 +20,7 @@ body
   text-align: center;
 }
   
-img.twicelogo
+img.calendar
 {
   width: 250px;
   height: 250px;
@@ -29,7 +29,7 @@ img.twicelogo
   top: 120px;
 }
   
-h1.twice-landing
+h1.title-landing
 {
   font-family: 'Ubuntu', sans-serif;
   position: relative;
@@ -169,13 +169,14 @@ h4.confirm-page
 /* Modal Content */
 .modal-content
 {
-    font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
   position: relative;
   background-color: #fefefe;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 80%;
+  width: 65%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.4s; 
@@ -184,7 +185,6 @@ h4.confirm-page
 /* Modal Header */
 .modal-header
 {
-    
   padding: 2px 10px;
   background-color: rgb(231, 108, 71);
   color: white;
@@ -235,16 +235,11 @@ h4.confirm-page
   text-align: center;
 }
 
-#table-contents
-{
-    border: 1px;
-    border-color: black;
-}
 
 p.create-event
 {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 17px;
+    font-size: 14px;
     text-align: left;
 }
 
@@ -267,6 +262,8 @@ input[type=text], select
 
 input[type=date], select
 {
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
   width: 100%;
   padding: 5px 5px;
   margin: 8px 0;
@@ -275,6 +272,7 @@ input[type=date], select
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  font-size: 12px;
 }
 
 input[type=submit], input[type=button]
@@ -297,6 +295,7 @@ input[type=submit]:hover
 
 #warning-event-type, #warning-event-title, #warning-event-date, #warning-event-postdate
 {
-    font-size: 13px;
+    font-size: 11px;
     color: red;
-} 
+    vertical-align: bottom;
+}
